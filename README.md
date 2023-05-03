@@ -13,11 +13,11 @@ Because of privacy regulations, most data sourced by wearables is not open to th
 
 Our working dataset is a CSV containing data (mainly integers and floats) of a subject's physical statistics as well as tracked information from their performance on various activities.  The physical statistics include age, gender, height, weight, body fat, and blood pressure while the tracked activities are gripForce, sit and bed forward, sit-ups, and broad jump. 
 
-![orig_csv]()
+![orig_csv](https://github.com/ChallahBack83/Body_Performance/blob/M_Rau/Images/orig_csv.png)
 
 Each subject has also been assigned a class (A,B,C,D) based on the data, with A being the best performance and D being the worst. The datapoints are evenly divided among the 4 classes. 
 
-![class_count]()
+![class_count](https://github.com/ChallahBack83/Body_Performance/blob/M_Rau/Images/class_cnt.png)
 
 However, breaking down the data, we can see that the gender count is approximately 2-1 male to female, and the age spread is heavily centered on the younger demographics. We will need to take these factors into consideration during our analysis.
  
@@ -37,7 +37,7 @@ age_df.columns = ["age", "counts"]
 age_df.head(10)
 ```
 
-![age_cnt]()
+![age_cnt](https://github.com/ChallahBack83/Body_Performance/blob/M_Rau/Images/age_cnt.png)
 
 ### Questions We Hope to Answer
 
