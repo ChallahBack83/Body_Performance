@@ -99,6 +99,7 @@ Screenshot of final merged table from separate 2 tables:
 #### Segment 1
 - [x] Takes in data from provisional database
    - Not necessary. Was pulling from PDF Rubric. See [ipynb_file](https://github.com/ChallahBack83/Body_Performance/blob/M_Rau/body_perf_ml_v1.1.ipynb) for current status which shows first run.
+   - Built connection to PostGres successfully see [HERE](https://github.com/ChallahBack83/Body_Performance/blob/M_Rau/bodyperf_ml_v1.2.ipynb) for version 1.2 with connection code.
 - [x] Outputs label(s) for input data
   - Classification use
   - Neural network
