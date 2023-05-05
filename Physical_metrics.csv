@@ -1,4 +1,4 @@
-ID,age,gender,height_cm,weight_kg,body_fat_%,diastolic,systolic
+ID_no,age,gender,height_cm,weight_kg,body_fat_pct,diastolic,systolic
 0,27,M,172.3,75.24,21.3,80.0,130.0
 1,25,M,165.0,55.8,15.7,77.0,126.0
 2,31,M,179.6,78.0,20.1,92.0,152.0
