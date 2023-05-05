@@ -53,16 +53,18 @@ age_df.head(10)
     
 ## Communication Protocols & Team Breakdown
 
-- As a team, we will remain in constant contact through our Slack chat, notifying each other when we are working in order to collaborate.
-- Meeting a minimum of 2-3 times each week, as a whole team or in pairs, to finalize each segment.
-- When we update code or other files in our branches, we will notify the team to review.
-- Update README in main branch before the end of each work session.
+- Communication
+  - As a team, we will remain in constant contact through our Slack chat, notifying each other when we are working in order to collaborate.
+  - Meeting a minimum of 2-3 times each week, as a whole team or in pairs, to finalize each segment.
+  - When we update code or other files in our branches, we will notify the team to review.
+  - Update README in main branch before the end of each work session.
 
-- Meredith is managing the README and oversight on the GitHub repository.
-- Joshua is taking point on data cleaning, processing, and coding.
-- Estefany is leading the database set up, queries, and management.
-- Meredith is taking point on the machine learning model.
-- Amani is leading the slide preparation and dashboard set up through Tableau
+- Team Breakdown
+  - Meredith is managing the README and oversight on the GitHub repository.
+  - Joshua is taking point on data cleaning, processing, and coding.
+  - Estefany is leading the database set up, queries, and management.
+  - Meredith is taking point on the machine learning model.
+  - Amani is leading the slide preparation and dashboard set up through Tableau
 
 As a team, we will work through each of these sections together, either in pairs or as a group, and not leave any team member completely alone on their segment of the project.
 
@@ -76,33 +78,87 @@ As a team, we will work through each of these sections together, either in pairs
 - Plotly, and Tableau for visualizations and dashboard creation.
 - SQLITE for database.
 - Google Slides for building presentation slide deck.
-    - What are we using for the webpage if anything?
 
-## Working Checklist for Project
+## Machine Learning Model
 
-### Database
+- See [v1.1.ipynb_file](https://github.com/ChallahBack83/Body_Performance/blob/M_Rau/body_perf_ml_v1.1.ipynb) which shows first test of model using Random Forest.
+- [x] Takes in data from provisional database
+   - Was pulling this from PDF Rubric.
+   - Built connection to PostGres successfully see [HERE](https://github.com/ChallahBack83/Body_Performance/blob/M_Rau/bodyperf_ml_v1.2.ipynb) for version 1.2 with connection code.
+- [x] Outputs label(s) for input data
+  - Classification
+  - Neural network
 
-#### Segment 1
-- [x] Sample data that mimics the expected final database structure or schema
+## Database
+
+- Initial data entered into final database
   - Table 1: Physical Features
   - Table 2: Activity Features
-  - Do we bin by ages here?
-    - Is this a separate table? a Third table?
-    - Create ID based on Index for join/merge.   
+  - See E_Lutker branch for images.
+- Created ID based on Index for join/merge.
+- Found data errors we will clean up and rerun through Database.
+- Joined into new table.
 
 Screenshot of final merged table from separate 2 tables:
 
 ![table_3](https://github.com/ChallahBack83/Body_Performance/blob/E_Lutker/table_3_test.png)
 
+## Working Checklist for Project
+
+### Presentation
+
+#### Segment 2
+- [x] Description of Data exploration phase of the project.
+ - Less Text
+- [ ] Description of Analysis phase of the project.
+  - Include images in these sections. Should show results of preliminary analysis.
+- [x] Technologies, languages, tools, algorithims used.
+  - Tighten and update this list.
+
+-- *Only on PDF Rubric from course GitLab Pull* --
+#### Dashboard  
+- [ ] Draft presentation on Google Slides  
+- [ ] Storyboard of Dashboard on Google Slides
+  - [ ] Description of tools for final dashboard
+  - [ ] Description of interactive elements
+
+### GitHub
+
+-- *Only on PDF Rubric from course GitLab Pull* --
+#### Segment 2   
+- [ ] production ready code in the Main Branch
+  - all code for exploratory analysis
+  - some code for machine learning
+- [ ] Branch for each with total of 8 commits each (minimum)
+- [ ] README.md
+  - [x] Communication protocols
+  - [ ] Outline of project with images (see Presentation above)
+
 ### Machine Learning Model
 
-#### Segment 1
-- [x] Takes in data from provisional database
-   - Not necessary. Was pulling from PDF Rubric. See [ipynb_file](https://github.com/ChallahBack83/Body_Performance/blob/M_Rau/body_perf_ml_v1.1.ipynb) for current status which shows first run.
-   - Built connection to PostGres successfully see [HERE](https://github.com/ChallahBack83/Body_Performance/blob/M_Rau/bodyperf_ml_v1.2.ipynb) for version 1.2 with connection code.
-- [x] Outputs label(s) for input data
-  - Classification use
-  - Neural network
+#### Segment 2
+- [ ] Machine learning model finished if not complete
+- [ ] Confusion matrix & accuracy score.
+  - [ ] Interpretation of accuracy, precision, sensitivity
 
+-- *Only on PDF Rubric from course GitLab Pull* --
+- [ ] Description of model  
+  - [ ] Discussion of preprocessing
+  - [ ] Description preliminary feature engineering, selection, & decision making process
+  - [ ] Description of how data was split train/test
+  - [ ] Explanation of model choice
+    - limitations & benefits
+    - Document problems and share instead of focusing on solving all little problems.
+
+
+### Database
+
+#### Segment 2
+- [x] Database stores data for the project with at least 2 tables
+- [x] Integretes with machine learning model
+
+-- *Only on PDF Rubric from course GitLab Pull* --
+- [x] Includes at least one join using DB language not Pandas
+- [x] At least one connection string (SQLAlchemy)
 
 [^1]: [Fortune Business Insights 2021 Report using data from 2017-2019](https://www.fortunebusinessinsights.com/fitness-tracker-market-103358).
