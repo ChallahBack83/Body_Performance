@@ -23,6 +23,7 @@ CREATE TABLE activity_metrics (
 
 
 SELECT p.age,
+	p.gender,
     p.height_cm,
     p.weight_kg,
     p.body_fat_pct,
@@ -35,7 +36,7 @@ SELECT p.age,
     a.ranking
 INTO body_performance
 FROM physical_metrics AS p
-INNER JOIN activity_metrics AS a
+LEFT JOIN activity_metrics AS a
 ON p.ID_no = a.ID_no;
 
 SELECT * 
