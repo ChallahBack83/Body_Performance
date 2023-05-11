@@ -15,7 +15,22 @@ Our working dataset is a CSV containing data (mainly integers and floats) of a s
 
 ![orig_csv](https://github.com/ChallahBack83/Body_Performance/blob/M_Rau/Images/orig_csv.png)
 
-Each subject has also been assigned a class (A,B,C,D) based on the data, with A being the best performance and D being the worst. The datapoints are evenly divided among the 4 classes. 
+### Questions We Hope to Answer
+
+  - Can we accurately classify a person's level of body performance (or health) using physical and activity statistics?
+  - What features impact class or body performance the most?
+  - How does age factor into given body performance?
+  - Is there a dramatic difference between genders?
+  - How do some features impact others?
+    - Weight or body fat to sit/bends, gripForce, situps, broad jump?
+    - Age to activity level?
+    - Gender to activity level?
+
+### Data Exploration & Analysis
+
+On initial inspection, our data is fairly clean, with no null values. However, we did need to rename some columns to make them work within SQL since they were words that were functions (id and class) or included symbols that did not work (body_fat_%).
+
+Each subject has been assigned a class (A,B,C,D) based on the data, with A being the best performance and D being the worst. The datapoints are evenly divided among the 4 classes so we do not have a minority class to account for in sampling
 
 ![class_count](https://github.com/ChallahBack83/Body_Performance/blob/M_Rau/Images/class_cnt.png)
 
@@ -39,17 +54,34 @@ age_df.head(10)
 
 ![age_cnt](https://github.com/ChallahBack83/Body_Performance/blob/M_Rau/Images/age_cnt.png)
 
-### Questions We Hope to Answer
+The data is easily split into two halves, with half of the features being physical measures and the other half being activity metrics. This is shown in the split of tables in our database which we then joined together with cleaned data.
 
-  - Can we accurately classify a person's level of body performance (or health) using physical and activity statistics?
-  - What features impact class or body performance the most?
-  - How does age factor into given body performance?
-  - Is there a dramatic difference between genders?
-  - How do some features impact others?
-    - Weight or body fat to blood pressure?
-    - Weight or body fat to sit/bends, gripForce, situps, broad jump?
-    - Age to activity level?
-    - Gender to activity level?
+![database](or link to files)
+
+Importing the data into visualization tools, we were able to see patterns broken down between the four classes. These lined up clearly with the feature importances discovered in our [machine learning model]().
+
+![feature_importance]()
+
+![dashboard]()
+
+## Machine Learning Model
+
+Ran several iterations of machine learning models focusing first on the ensemble learner, [RandomForestClassifier](). Then ran several iterations of a [NeuralNetwork]() to compare accuracy and define the best model.  The best accuracy scores of each model are very close with both running close to 74%. Sensitivity for the RandomForestClassifier is also 75%. We are prioritizing the RandomForestClassifier at the  moment based of the sensitivity score, but we will test speed differences and use that to help select the final model choice.
+
+![confusion matrix]()
+![rf_classification()
+
+The confusion matrix and classification report show that this model most accurately predicted Rank A (0) and Rank D (3).  This could potentially be influenced by the weight of the number from encoding the target values, but we are not fully sure how to test that.
+
+In the neural network, we used OneHotEncode to create binary values in 4 different columns, which did affect the accuracy for the neural network model. However, it did not make the model more accurate than the RandomForestClassifier.
+
+## Database
+
+Final data has been entered into two tables, one for [physical metrics]() and another for [activity metrics]().  They were merged together to create a new [body performance data]() file for our analysis phase.
+
+- Created ID based on Index for join/merge.
+- Cleaned up data errors.
+- Joined into new table.
     
 ## Communication Protocols & Team Breakdown
 
@@ -61,7 +93,7 @@ age_df.head(10)
 
 - Team Breakdown
   - Meredith is managing the README and oversight on the GitHub repository.
-  - Joshua is taking point on data cleaning, processing, and coding.
+  - Joshua is taking point on data cleaning, processing, and visualizations in Tableau
   - Estefany is leading the database set up, queries, and management.
   - Meredith is taking point on the machine learning model.
   - Amani is leading the slide preparation and dashboard set up through Tableau
@@ -70,38 +102,21 @@ As a team, we will work through each of these sections together, either in pairs
 
 ## Technologies
 
-- Python, Pandas, Numpy in Juptyer Notebook for coding, processing, analysis, and preparing and running machine learning model.
-  - May want to consider Google Collab for access to TensorFlow/AWS connection.
-- SciKitLearn for machine learning model using Ensemble testing 
-  - With size of dataset, may be best to use TensorFlow and Keras
-- PgAdmin/Postgres for setting up, querying, and merging the database.
-- Plotly, and Tableau for visualizations and dashboard creation.
-- SQLITE for database.
-- Google Slides for building presentation slide deck.
+- Database
+  - Postgres through PgAdmin for setting up, querying, and merging the database.
+  - Psycopg2 Python library for database connection.
+- Visualizations
+  - Google Slides for presentations slide deck.
+  - Tableau for dashboard and story.
+  - Plotly for some graphics to be added to dashboard
+- Analysis, Machine Learning, and Data Processing
+  - Jupyter Notebook for all coding.
+  - Python, with Pandas, Numpy  for processing and analysis
+  - SciKitLearn for machine learning, preprocessing, and Ensemble testing.
+  - Tensorflow for neural network modeling.
+  
 
-## Machine Learning Model
 
-- See [v1.1.ipynb_file](https://github.com/ChallahBack83/Body_Performance/blob/M_Rau/body_perf_ml_v1.1.ipynb) which shows first test of model using Random Forest.
-- [x] Takes in data from provisional database
-   - Was pulling this from PDF Rubric.
-   - Built connection to PostGres successfully see [HERE](https://github.com/ChallahBack83/Body_Performance/blob/M_Rau/bodyperf_ml_v1.2.ipynb) for version 1.2 with connection code.
-- [x] Outputs label(s) for input data
-  - Classification
-  - Neural network
-
-## Database
-
-- Initial data entered into final database
-  - Table 1: Physical Features
-  - Table 2: Activity Features
-  - See E_Lutker branch for images.
-- Created ID based on Index for join/merge.
-- Found data errors we will clean up and rerun through Database.
-- Joined into new table.
-
-Screenshot of final merged table from separate 2 tables:
-
-![table_3](https://github.com/ChallahBack83/Body_Performance/blob/E_Lutker/table_3_test.png)
 
 ## Working Checklist for Project
 
@@ -110,15 +125,15 @@ Screenshot of final merged table from separate 2 tables:
 #### Segment 2
 - [x] Description of Data exploration phase of the project.
  - Less Text
-- [ ] Description of Analysis phase of the project.
+- [x] Description of Analysis phase of the project.
   - Include images in these sections. Should show results of preliminary analysis.
 - [x] Technologies, languages, tools, algorithims used.
   - Tighten and update this list.
 
 -- *Only on PDF Rubric from course GitLab Pull* --
 #### Dashboard  
-- [ ] Draft presentation on Google Slides  
-- [ ] Storyboard of Dashboard on Google Slides
+- [x] Draft presentation on Google Slides  
+- [x] Storyboard of Dashboard on Google Slides
   - [ ] Description of tools for final dashboard
   - [ ] Description of interactive elements
 
@@ -129,20 +144,20 @@ Screenshot of final merged table from separate 2 tables:
 - [ ] production ready code in the Main Branch
   - all code for exploratory analysis
   - some code for machine learning
-- [ ] Branch for each with total of 8 commits each (minimum)
+- [x] Branch for each with total of 8 commits each (minimum)
 - [ ] README.md
   - [x] Communication protocols
-  - [ ] Outline of project with images (see Presentation above)
+  - [x] Outline of project with images (see Presentation above)
 
 ### Machine Learning Model
 
 #### Segment 2
-- [ ] Machine learning model finished if not complete
-- [ ] Confusion matrix & accuracy score.
-  - [ ] Interpretation of accuracy, precision, sensitivity
+- [x] Machine learning model finished if not complete
+- [x] Confusion matrix & accuracy score.
+  - [x] Interpretation of accuracy, precision, sensitivity
 
 -- *Only on PDF Rubric from course GitLab Pull* --
-- [ ] Description of model  
+- [x] Description of model  
   - [ ] Discussion of preprocessing
   - [ ] Description preliminary feature engineering, selection, & decision making process
   - [ ] Description of how data was split train/test
@@ -151,14 +166,5 @@ Screenshot of final merged table from separate 2 tables:
     - Document problems and share instead of focusing on solving all little problems.
 
 
-### Database
-
-#### Segment 2
-- [x] Database stores data for the project with at least 2 tables
-- [x] Integretes with machine learning model
-
--- *Only on PDF Rubric from course GitLab Pull* --
-- [x] Includes at least one join using DB language not Pandas
-- [x] At least one connection string (SQLAlchemy)
 
 [^1]: [Fortune Business Insights 2021 Report using data from 2017-2019](https://www.fortunebusinessinsights.com/fitness-tracker-market-103358).
