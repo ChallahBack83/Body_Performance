@@ -55,9 +55,7 @@ age_df.head(10)
 
 ![age_cnt](https://github.com/ChallahBack83/Body_Performance/blob/M_Rau/Images/age_cnt.png)
 
-The data is easily split into two halves, with half of the features being physical measures and the other half being activity metrics. This is shown in the split of tables in our database which we then joined together with cleaned data.
-
-![database](or link to files)
+The data is easily split into two halves, with half of the features being physical measures and the other half being activity metrics. This is shown in the split of tables in our database which we then joined together with cleaned data. Find images of our tables [HERE](https://github.com/ChallahBack83/Body_Performance/tree/main/Table%20Images).
 
 Importing the data into visualization tools, we were able to see patterns broken down between the four classes. These lined up clearly with the feature importances discovered in our [machine learning models](https://github.com/ChallahBack83/Body_Performance/tree/main/ml_versions).
 
@@ -67,7 +65,7 @@ Importing the data into visualization tools, we were able to see patterns broken
 
 ## Machine Learning Model
 
-Ran several iterations of machine learning models focusing first on the ensemble learner, [RandomForestClassifier](https://github.com/ChallahBack83/Body_Performance/blob/main/ml_versions/Final_bodyperf_ml_model.ipynb). Then ran several iterations of a [NeuralNetwork](https://github.com/ChallahBack83/Body_Performance/blob/main/ml_versions/NN_final_model.ipynb) to compare accuracy and define the best model.  The best accuracy scores of each model are very close with both running close to 74%. Sensitivity for the RandomForestClassifier is also 75%. We are prioritizing the RandomForestClassifier at the  moment based of the sensitivity score, but we will test speed differences and use that to help select the final model choice.
+We ran several iterations of machine learning models focusing first on the ensemble learner, [RandomForestClassifier](https://github.com/ChallahBack83/Body_Performance/blob/main/ml_versions/Final_bodyperf_ml_model.ipynb). Then ran several iterations of a [NeuralNetwork](https://github.com/ChallahBack83/Body_Performance/blob/main/ml_versions/NN_final_model.ipynb) to compare accuracy and define the best model.  The best accuracy scores of each model are very close with both running close to 74%. Sensitivity for the RandomForestClassifier is also 75%. We are prioritizing the RandomForestClassifier at the  moment based of the sensitivity score, but we will test speed differences and use that to help select the final model choice.
 
 ![confusion matrix](https://github.com/ChallahBack83/Body_Performance/blob/main/Images/rf_confusion_matrix.png)
 ![rf_classification](https://github.com/ChallahBack83/Body_Performance/blob/main/Images/rf_classification.png)
@@ -78,10 +76,11 @@ In the neural network, we used OneHotEncode to create binary values in 4 differe
 
 ## Database
 
-Final data has been entered into two [tables](https://github.com/ChallahBack83/Body_Performance/blob/main/Table%20Images/importing_data_to_tables.png), one for [physical metrics](https://github.com/ChallahBack83/Body_Performance/blob/main/Resources/Physical_metrics.csv) and another for [activity metrics](https://github.com/ChallahBack83/Body_Performance/blob/main/Resources/Activity_metrics.csv).  They were merged together to create a new [body performance data](https://github.com/ChallahBack83/Body_Performance/blob/main/Resources/body_performance.csv) file for our analysis phase.
+Final data has been entered into two [tables](https://github.com/ChallahBack83/Body_Performance/blob/main/Table%20Images/importing_data_to_tables.png), one for [physical metrics](https://github.com/ChallahBack83/Body_Performance/blob/main/Resources/Physical_metrics.csv) and another for [activity metrics](https://github.com/ChallahBack83/Body_Performance/blob/main/Resources/Activity_metrics.csv).  They were merged together to create a new [body performance data](https://github.com/ChallahBack83/Body_Performance/blob/main/Resources/body_performance.csv) file for our analysis phase. 
 
 ![body_table](https://github.com/ChallahBack83/Body_Performance/blob/main/Table%20Images/body_performance_table.png)
 
+You can view the schema [HERE](https://github.com/ChallahBack83/Body_Performance/blob/main/Resources/body_perf_schema.sql) and the updated ERD [HERE](https://github.com/ChallahBack83/Body_Performance/blob/main/Table%20Images/ERD_Schema_for_tables.png).
 - Created ID based on Index for join/merge.
 - Cleaned up data errors.
 - Joined into new table.
