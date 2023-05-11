@@ -1,5 +1,6 @@
 # GroupProject2023
 
+Rough draft of presentation slide [HERE](https://docs.google.com/presentation/d/1kYg-bvy_dPiT_QFUBEQEtB2kAm_iFrdXltL5T15IgjE/edit#slide=id.p).
 
 ## Presentation & Project Draft
 
@@ -58,26 +59,28 @@ The data is easily split into two halves, with half of the features being physic
 
 ![database](or link to files)
 
-Importing the data into visualization tools, we were able to see patterns broken down between the four classes. These lined up clearly with the feature importances discovered in our [machine learning model]().
+Importing the data into visualization tools, we were able to see patterns broken down between the four classes. These lined up clearly with the feature importances discovered in our [machine learning models](https://github.com/ChallahBack83/Body_Performance/tree/main/ml_versions).
 
-![feature_importance]()
+![feature_importance](https://github.com/ChallahBack83/Body_Performance/blob/main/Images/rf_feature_list.png)
 
-![dashboard]()
+![dashboard](https://github.com/ChallahBack83/Body_Performance/blob/J_Albrecht/First_Dashboard.png)
 
 ## Machine Learning Model
 
-Ran several iterations of machine learning models focusing first on the ensemble learner, [RandomForestClassifier](). Then ran several iterations of a [NeuralNetwork]() to compare accuracy and define the best model.  The best accuracy scores of each model are very close with both running close to 74%. Sensitivity for the RandomForestClassifier is also 75%. We are prioritizing the RandomForestClassifier at the  moment based of the sensitivity score, but we will test speed differences and use that to help select the final model choice.
+Ran several iterations of machine learning models focusing first on the ensemble learner, [RandomForestClassifier](https://github.com/ChallahBack83/Body_Performance/blob/main/ml_versions/Final_bodyperf_ml_model.ipynb). Then ran several iterations of a [NeuralNetwork](https://github.com/ChallahBack83/Body_Performance/blob/main/ml_versions/NN_final_model.ipynb) to compare accuracy and define the best model.  The best accuracy scores of each model are very close with both running close to 74%. Sensitivity for the RandomForestClassifier is also 75%. We are prioritizing the RandomForestClassifier at the  moment based of the sensitivity score, but we will test speed differences and use that to help select the final model choice.
 
-![confusion matrix]()
-![rf_classification()
+![confusion matrix](https://github.com/ChallahBack83/Body_Performance/blob/main/Images/rf_confusion_matrix.png)
+![rf_classification](https://github.com/ChallahBack83/Body_Performance/blob/main/Images/rf_classification.png)
 
-The confusion matrix and classification report show that this model most accurately predicted Rank A (0) and Rank D (3).  This could potentially be influenced by the weight of the number from encoding the target values, but we are not fully sure how to test that.
+The confusion matrix and classification report show that this model most accurately predicted Rank A (0) and Rank D (3).  This could potentially be influenced by the weight of the number from encoding the target values, but we are not fully sure how should test that yet.
 
-In the neural network, we used OneHotEncode to create binary values in 4 different columns, which did affect the accuracy for the neural network model. However, it did not make the model more accurate than the RandomForestClassifier.
+In the neural network, we used OneHotEncode to create binary values in 4 different columns, which did affect the accuracy for the neural network model. However, it did not make the model more accurate than the RandomForestClassifier which used a single Target column with A, B, C, D ranks encoded as 0, 1, 2, 3.
 
 ## Database
 
-Final data has been entered into two tables, one for [physical metrics]() and another for [activity metrics]().  They were merged together to create a new [body performance data]() file for our analysis phase.
+Final data has been entered into two [tables](https://github.com/ChallahBack83/Body_Performance/blob/main/Table%20Images/importing_data_to_tables.png), one for [physical metrics](https://github.com/ChallahBack83/Body_Performance/blob/main/Resources/Physical_metrics.csv) and another for [activity metrics](https://github.com/ChallahBack83/Body_Performance/blob/main/Resources/Activity_metrics.csv).  They were merged together to create a new [body performance data](https://github.com/ChallahBack83/Body_Performance/blob/main/Resources/body_performance.csv) file for our analysis phase.
+
+![body_table](https://github.com/ChallahBack83/Body_Performance/blob/main/Table%20Images/body_performance_table.png)
 
 - Created ID based on Index for join/merge.
 - Cleaned up data errors.
@@ -145,7 +148,7 @@ As a team, we will work through each of these sections together, either in pairs
   - all code for exploratory analysis
   - some code for machine learning
 - [x] Branch for each with total of 8 commits each (minimum)
-- [ ] README.md
+- [x] README.md
   - [x] Communication protocols
   - [x] Outline of project with images (see Presentation above)
 
@@ -158,10 +161,10 @@ As a team, we will work through each of these sections together, either in pairs
 
 -- *Only on PDF Rubric from course GitLab Pull* --
 - [x] Description of model  
-  - [ ] Discussion of preprocessing
+  - [x] Discussion of preprocessing
   - [ ] Description preliminary feature engineering, selection, & decision making process
   - [ ] Description of how data was split train/test
-  - [ ] Explanation of model choice
+  - [x] Explanation of model choice
     - limitations & benefits
     - Document problems and share instead of focusing on solving all little problems.
 
