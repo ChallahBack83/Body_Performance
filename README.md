@@ -1,10 +1,11 @@
-# GroupProject2023
+# Body Performance Multi-Class Classification
+### GroupProject2023
 
-Rough draft of presentation slide [HERE](https://docs.google.com/presentation/d/1kYg-bvy_dPiT_QFUBEQEtB2kAm_iFrdXltL5T15IgjE/edit#slide=id.p).
+Project slide deck can be found [HERE](https://docs.google.com/presentation/d/1kYg-bvy_dPiT_QFUBEQEtB2kAm_iFrdXltL5T15IgjE/edit#slide=id.p).
 
-## Presentation & Project Draft
+Checkout our Dashboard [HERE]().
 
-### Project Topic
+## Topic Overview
 
 For this project, we have chosen to explore Body Performance and how it may be used to verify and classify the health level of individuals. Health tracking and fitness data have become very popular especially with the rise of wearable fitness trackers and smartphones. According to [Fortune Business Insights](https://www.fortunebusinessinsights.com/fitness-tracker-market-103358), a 2019 Pew Research poll shows 1 in 5 Americans regularly use fitness monitoring devices, and that number is growing. The global market size for fitness trackers as of 2020 was valued at 36.34 billion USD and projected to be worth 114.36 billion USD by 2028. There are even medical professionals running research programs using these wearables to understand, analyze practices, and improve decision making[^1]. This market growth demonstrates the continuing importance of understanding which data points matter for predicting health and quality of life.  These are the reasons we have selected Body Performance as our topic for this final project.
  
@@ -94,78 +95,36 @@ You can view the schema [HERE](https://github.com/ChallahBack83/Body_Performance
   - Update README in main branch before the end of each work session.
 
 - Team Breakdown
-  - Meredith is managing the README and oversight on the GitHub repository.
-  - Joshua is taking point on data cleaning, processing, and visualizations in Tableau
-  - Estefany is leading the database set up, queries, and management.
-  - Meredith is taking point on the machine learning model.
-  - Amani is leading the slide preparation and dashboard set up through Tableau
-
+  - Meredith Rau is managing the README, GitHub, and machine learning.
+  - Joshua Albrecht is managing the dashboard, data cleaning, and data exploration.
+  - Estefany Lutker is leading database management, queries, and working on analysis.
+  - Amani Smith is leading the slide preparation, visualizations, and working on data exploration.
+  - 
 As a team, we will work through each of these sections together, either in pairs or as a group, and not leave any team member completely alone on their segment of the project.
 
 ## Technologies
 
-- Database
-  - Postgres through PgAdmin for setting up, querying, and merging the database.
+- Database Tools
+  - PostgresSQL through PgAdmin for setting up, querying, and merging the database.
   - Psycopg2 Python library for database connection.
+- Data Processing
+  - Python
+  - Jupyter Notebook
+  - Pandas, NumPy, Matplotlib, and SciKitLearn for analysis and processing.
+  - Psycopg2 for database connection to PostgresSQL.
 - Visualizations
   - Google Slides for presentations slide deck.
   - Tableau for dashboard and story.
-  - Plotly for some graphics to be added to dashboard
-- Analysis, Machine Learning, and Data Processing
-  - Jupyter Notebook for all coding.
-  - Python, with Pandas, Numpy  for processing and analysis
+  - Plotly for some graphics to be added to dashboard.
+  - Graphviz to visualize machine learning tree.
+- Machine Learning
+  - Jupyter Notebook
+  - Python
+  - Pandas, NumPy, and SciKitLearn.
   - SciKitLearn for machine learning, preprocessing, and Ensemble testing.
   - Tensorflow for neural network modeling.
   
 
-
-
-## Working Checklist for Project
-
-### Presentation
-
-#### Segment 2
-- [x] Description of Data exploration phase of the project.
- - Less Text
-- [x] Description of Analysis phase of the project.
-  - Include images in these sections. Should show results of preliminary analysis.
-- [x] Technologies, languages, tools, algorithims used.
-  - Tighten and update this list.
-
--- *Only on PDF Rubric from course GitLab Pull* --
-#### Dashboard  
-- [x] Draft presentation on Google Slides  
-- [x] Storyboard of Dashboard on Google Slides
-  - [ ] Description of tools for final dashboard
-  - [ ] Description of interactive elements
-
-### GitHub
-
--- *Only on PDF Rubric from course GitLab Pull* --
-#### Segment 2   
-- [ ] production ready code in the Main Branch
-  - all code for exploratory analysis
-  - some code for machine learning
-- [x] Branch for each with total of 8 commits each (minimum)
-- [x] README.md
-  - [x] Communication protocols
-  - [x] Outline of project with images (see Presentation above)
-
-### Machine Learning Model
-
-#### Segment 2
-- [x] Machine learning model finished if not complete
-- [x] Confusion matrix & accuracy score.
-  - [x] Interpretation of accuracy, precision, sensitivity
-
--- *Only on PDF Rubric from course GitLab Pull* --
-- [x] Description of model  
-  - [x] Discussion of preprocessing
-  - [ ] Description preliminary feature engineering, selection, & decision making process
-  - [ ] Description of how data was split train/test
-  - [x] Explanation of model choice
-    - limitations & benefits
-    - Document problems and share instead of focusing on solving all little problems.
 
 
 
