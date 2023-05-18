@@ -84,20 +84,20 @@ However, breaking down the data, we can see that the gender count is approximate
 
 ![gender_count](https://github.com/ChallahBack83/Body_Performance/blob/main/Images/Gender_breakdown_slides.png)
 
-![age_rank]()
+![age_rank](https://github.com/ChallahBack83/Body_Performance/blob/main/Images/age_rank.png)
 
 The data is easily split into two halves, with half of the features being physical measures and the other half being activity metrics. This is shown in the split of tables in our database which we then joined together with cleaned data. 
 
 Importing the data into visualization tools, we were able to see patterns broken down between the four classes. These lined up clearly with the feature importances discovered in our machine learning models.
 
-![feature_importance_slide]()
+![feature_importance_slide](https://github.com/ChallahBack83/Body_Performance/blob/main/Images/feature_importances_slide.png)
 
 
 ## Machine Learning Model
 
 We ran several iterations of machine learning models focusing first on the ensemble learner, RandomForestClassifier. Then we ran several iterations of a NeuralNetwork to compare accuracy and define the best model.  The best accuracy scores of each model are very close with all running close to 74%. Sensitivity for the Balanced Random Forest Classifier is also 75%. 
 
-![model_selection]().
+![model_selection](https://github.com/ChallahBack83/Body_Performance/blob/main/Images/model_selection.png).
 
 
 Though all the models are close, we are prioritizing the BalancedRandomForestClassifier because of it's speed, with the model running for 12 seconds versus the second best model (Neural Network) at 52 seconds. You can compare models in [this csv](). 
@@ -109,7 +109,7 @@ The confusion matrix and classification report show that this model most accurat
 
 In the neural network, we used OneHotEncode to create binary values in 4 different columns, which did affect the accuracy for the neural network model. However, it did not make the model more accurate than the Ensemble Learners, which were more accurate with Label Encodeing a single Target column with A, B, C, D ranks encoded as 0, 1, 2, 3.
 
-![encode_compare]().
+![encode_compare](https://github.com/ChallahBack83/Body_Performance/blob/main/Images/encode_compare.png).
 
 ## Database
 
