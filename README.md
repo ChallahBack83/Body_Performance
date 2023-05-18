@@ -1,12 +1,21 @@
 # Body Performance Multi-Class Classification
 
-Project slide deck can be found [HERE](https://docs.google.com/presentation/d/1kYg-bvy_dPiT_QFUBEQEtB2kAm_iFrdXltL5T15IgjE/edit#slide=id.p).
-
 Checkout our Dashboard [HERE](https://public.tableau.com/app/profile/josh.albrecht/viz/BodyPerformanceDataFinal/BodyPerformanceData).
 
 ## Topic Overview
 
 For this project, we have chosen to explore Body Performance and how it may be used to verify and classify the health level of individuals. Health tracking and fitness data have become very popular especially with the rise of wearable fitness trackers and smartphones. According to [Fortune Business Insights](https://www.fortunebusinessinsights.com/fitness-tracker-market-103358), a 2019 Pew Research poll shows 1 in 5 Americans regularly use fitness monitoring devices, and that number is growing. The global market size for fitness trackers as of 2020 was valued at 36.34 billion USD and projected to be worth 114.36 billion USD by 2028. There are even medical professionals running research programs using these wearables to understand, analyze practices, and improve decision making[^1]. This market growth demonstrates the continuing importance of understanding which data points matter for predicting health and quality of life.  These are the reasons we have selected Body Performance as our topic for this final project.
+
+## Project Contents
+
+- Data Cleaning & Exploration [HERE](Data_Cleaning.ipynb).
+- Database Schema [HERE](https://github.com/ChallahBack83/Body_Performance/blob/main/queries_for_tables.sql)
+- Database Creation image [HERE](https://github.com/ChallahBack83/Body_Performance/blob/main/Table%20Images/body_performance_table.png)
+- Database ERD [HERE](https://github.com/ChallahBack83/Body_Performance/blob/main/Table%20Images/ERD%20Schema.png)
+- Machine Learning, Final Model [HERE](final_ml_model.ipynb)
+- Dashboard [HERE](https://public.tableau.com/app/profile/josh.albrecht/viz/BodyPerformanceDataFinal/BodyPerformanceData)
+- Presentation Slide Deck [HERE](https://docs.google.com/presentation/d/1kYg-bvy_dPiT_QFUBEQEtB2kAm_iFrdXltL5T15IgjE/edit#slide=id.p)
+
 
 ## Communication Protocols & Team Breakdown
 
@@ -14,13 +23,13 @@ For this project, we have chosen to explore Body Performance and how it may be u
   - Meredith Rau is managing the README, GitHub, and machine learning.
   - Joshua Albrecht is managing the dashboard, data cleaning, and data exploration.
   - Estefany Lutker is leading database management, queries, and working on analysis.
-  - Amani Smith is leading the slide preparation, visualizations, and working on data exploration.
+  - Amani Smith is leading the slide preparation and working on data exploration and visualizations.
 - Communication
   - As a team, we will remain in constant contact through our Slack chat, notifying each other when we are working in order to collaborate.
-  - Meeting a minimum of 2-3 times each week, as a whole team or in pairs, to finalize each segment.
+  - Meeting a minimum of 3 times each week, as a whole team or in pairs, to finalize each segment.
   - When we update code or other files in our branches, we will notify the team to review.
   - Update README in main branch before the end of each work session.
-  - As a team, we will work through each of these sections together, either in pairs or as a group, and not leave any team member completely alone on their     segment of the project.
+  - As a team, we will work through each of these sections together, either in pairs or as a group, and not leave any team member completely alone on their segment of the project.
 
 ## Technologies
 
