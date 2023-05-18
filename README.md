@@ -53,7 +53,7 @@ For this project, we have chosen to explore Body Performance and how it may be u
   - SciKitLearn for machine learning, preprocessing, and Ensemble testing.
   - Tensorflow for neural network modeling.
  
-### Dataset Description
+## Dataset Description
  
 Because of privacy regulations, most data sourced by wearables is not open to the public. However, some individuals and research organizations have provided datasets that allow us to study fitness and health datapoints. Our dataset was found on [Kaggle](https://www.kaggle.com/datasets/kukuroo3/body-performance-data) and originally sourced from the Korea Sports Promotion Foundation on the Korean website, [BigData Culture](https://www.bigdata-culture.kr/bigdata/user/data_market/detail.do?id=ace0aea7-5eee-48b9-b616-637365d665c1). The data has gone through some post-processing and filtering, but it still contains 12 features and 13,393 rows of data.  We tried to access the updated raw data, but we could not do so without Korean contact information.
 
@@ -61,7 +61,7 @@ Our working dataset is a CSV containing data (mainly integers and floats) of a s
 
 ![orig_csv](https://github.com/ChallahBack83/Body_Performance/blob/M_Rau/Images/orig_csv.png)
 
-### Questions We Hope to Answer
+## Questions We Hope to Answer
 
   - Can we accurately classify a person's level of body performance (or health) using physical and activity statistics?
   - What features impact class or body performance the most?
@@ -72,7 +72,7 @@ Our working dataset is a CSV containing data (mainly integers and floats) of a s
     - Age to activity level?
     - Gender to activity level?
 
-### Data Exploration & Analysis
+## Data Exploration & Analysis
 
 On initial inspection, our data is fairly clean, with no null values. However, we did need to rename some columns to make them work within SQL since they were words that were functions (id and class) or included symbols that did not work (body_fat_%).
 
@@ -110,9 +110,9 @@ Importing the data into visualization tools, we were able to see patterns broken
 
 ## Machine Learning Model
 
-We ran several iterations of machine learning models focusing first on the ensemble learner, [RandomForestClassifier](https://github.com/ChallahBack83/Body_Performance/blob/main/ml_versions/Final_bodyperf_ml_model.ipynb). Then ran several iterations of a [NeuralNetwork](https://github.com/ChallahBack83/Body_Performance/blob/main/ml_versions/NN_final_model.ipynb) to compare accuracy and define the best model.  The best accuracy scores of each model are very close with both running close to 74%. Sensitivity for the RandomForestClassifier is also 75%. We are prioritizing the RandomForestClassifier at the  moment based of the sensitivity score, but we will test speed differences and use that to help select the final model choice.
+We ran several iterations of machine learning models focusing first on the ensemble learner, [RandomForestClassifier](https://github.com/ChallahBack83/Body_Performance/blob/main/ml_versions/Final_bodyperf_ml_model.ipynb). Then ran several iterations of a [NeuralNetwork](https://github.com/ChallahBack83/Body_Performance/blob/main/ml_versions/NN_final_model.ipynb) to compare accuracy and define the best model.  The best accuracy scores of each model are very close with both running close to 74%. Sensitivity for the Balanced Random Forest Classifier is also 75%. We are prioritizing the RandomForestClassifier at the  moment based of the sensitivity score, but we will test speed differences and use that to help select the final model choice.
 
-![confusion matrix](https://github.com/ChallahBack83/Body_Performance/blob/main/Images/rf_confusion_matrix.png)
+![confusion matrix](https://github.com/ChallahBack83/Body_Performance/blob/main/Images/confusion_matrix.png)
 ![rf_classification](https://github.com/ChallahBack83/Body_Performance/blob/main/Images/rf_classification.png)
 
 The confusion matrix and classification report show that this model most accurately predicted Rank A (0) and Rank D (3).  This could potentially be influenced by the weight of the number from encoding the target values, but we are not fully sure how should test that yet.
@@ -123,9 +123,7 @@ In the neural network, we used OneHotEncode to create binary values in 4 differe
 
 Final data has been entered into two [tables](https://github.com/ChallahBack83/Body_Performance/blob/main/Table%20Images/importing_data_to_tables.png), one for [physical metrics](https://github.com/ChallahBack83/Body_Performance/blob/main/Resources/Physical_metrics.csv) and another for [activity metrics](https://github.com/ChallahBack83/Body_Performance/blob/main/Resources/Activity_metrics.csv).  They were merged together to create a new [body performance data](https://github.com/ChallahBack83/Body_Performance/blob/main/Resources/body_performance.csv) file for our analysis phase. 
 
-![body_table](https://github.com/ChallahBack83/Body_Performance/blob/main/Table%20Images/body_performance_table.png)
-
-You can view the schema [HERE](https://github.com/ChallahBack83/Body_Performance/blob/main/Resources/body_perf_schema.sql) and the updated ERD [HERE](https://github.com/ChallahBack83/Body_Performance/blob/main/Table%20Images/ERD_Schema_for_tables.png).
+You can view the schema [HERE](https://github.com/ChallahBack83/Body_Performance/blob/main/Resources/body_perf_schema.sql) and the updated ERD [HERE](https://github.com/ChallahBack83/Body_Performance/blob/main/Table%20Images/ERD%20Schema.png).
 - Created ID based on Index for join/merge.
 - Cleaned up data errors.
 - Joined into new table.
