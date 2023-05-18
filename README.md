@@ -1,13 +1,48 @@
 # Body Performance Multi-Class Classification
-### GroupProject2023
 
 Project slide deck can be found [HERE](https://docs.google.com/presentation/d/1kYg-bvy_dPiT_QFUBEQEtB2kAm_iFrdXltL5T15IgjE/edit#slide=id.p).
 
-Checkout our Dashboard [HERE]().
+Checkout our Dashboard [HERE](https://public.tableau.com/app/profile/josh.albrecht/viz/BodyPerformanceDataFinal/BodyPerformanceData).
 
 ## Topic Overview
 
 For this project, we have chosen to explore Body Performance and how it may be used to verify and classify the health level of individuals. Health tracking and fitness data have become very popular especially with the rise of wearable fitness trackers and smartphones. According to [Fortune Business Insights](https://www.fortunebusinessinsights.com/fitness-tracker-market-103358), a 2019 Pew Research poll shows 1 in 5 Americans regularly use fitness monitoring devices, and that number is growing. The global market size for fitness trackers as of 2020 was valued at 36.34 billion USD and projected to be worth 114.36 billion USD by 2028. There are even medical professionals running research programs using these wearables to understand, analyze practices, and improve decision making[^1]. This market growth demonstrates the continuing importance of understanding which data points matter for predicting health and quality of life.  These are the reasons we have selected Body Performance as our topic for this final project.
+
+## Communication Protocols & Team Breakdown
+
+- Team Breakdown
+  - Meredith Rau is managing the README, GitHub, and machine learning.
+  - Joshua Albrecht is managing the dashboard, data cleaning, and data exploration.
+  - Estefany Lutker is leading database management, queries, and working on analysis.
+  - Amani Smith is leading the slide preparation, visualizations, and working on data exploration.
+- Communication
+  - As a team, we will remain in constant contact through our Slack chat, notifying each other when we are working in order to collaborate.
+  - Meeting a minimum of 2-3 times each week, as a whole team or in pairs, to finalize each segment.
+  - When we update code or other files in our branches, we will notify the team to review.
+  - Update README in main branch before the end of each work session.
+  - As a team, we will work through each of these sections together, either in pairs or as a group, and not leave any team member completely alone on their     segment of the project.
+
+## Technologies
+
+- Database Tools
+  - PostgresSQL through PgAdmin for setting up, querying, and merging the database.
+  - Psycopg2 Python library for database connection.
+- Data Processing
+  - Python
+  - Jupyter Notebook
+  - Pandas, NumPy, Matplotlib, and SciKitLearn for analysis and processing.
+  - Psycopg2 for database connection to PostgresSQL.
+- Visualizations
+  - Google Slides for presentations slide deck.
+  - Tableau for dashboard and story.
+  - Plotly for some graphics to be added to dashboard.
+  - Graphviz to visualize machine learning tree.
+- Machine Learning
+  - Jupyter Notebook
+  - Python
+  - Pandas, NumPy, and SciKitLearn.
+  - SciKitLearn for machine learning, preprocessing, and Ensemble testing.
+  - Tensorflow for neural network modeling.
  
 ### Dataset Description
  
@@ -86,43 +121,7 @@ You can view the schema [HERE](https://github.com/ChallahBack83/Body_Performance
 - Cleaned up data errors.
 - Joined into new table.
     
-## Communication Protocols & Team Breakdown
 
-- Communication
-  - As a team, we will remain in constant contact through our Slack chat, notifying each other when we are working in order to collaborate.
-  - Meeting a minimum of 2-3 times each week, as a whole team or in pairs, to finalize each segment.
-  - When we update code or other files in our branches, we will notify the team to review.
-  - Update README in main branch before the end of each work session.
-
-- Team Breakdown
-  - Meredith Rau is managing the README, GitHub, and machine learning.
-  - Joshua Albrecht is managing the dashboard, data cleaning, and data exploration.
-  - Estefany Lutker is leading database management, queries, and working on analysis.
-  - Amani Smith is leading the slide preparation, visualizations, and working on data exploration.
-  - 
-As a team, we will work through each of these sections together, either in pairs or as a group, and not leave any team member completely alone on their segment of the project.
-
-## Technologies
-
-- Database Tools
-  - PostgresSQL through PgAdmin for setting up, querying, and merging the database.
-  - Psycopg2 Python library for database connection.
-- Data Processing
-  - Python
-  - Jupyter Notebook
-  - Pandas, NumPy, Matplotlib, and SciKitLearn for analysis and processing.
-  - Psycopg2 for database connection to PostgresSQL.
-- Visualizations
-  - Google Slides for presentations slide deck.
-  - Tableau for dashboard and story.
-  - Plotly for some graphics to be added to dashboard.
-  - Graphviz to visualize machine learning tree.
-- Machine Learning
-  - Jupyter Notebook
-  - Python
-  - Pandas, NumPy, and SciKitLearn.
-  - SciKitLearn for machine learning, preprocessing, and Ensemble testing.
-  - Tensorflow for neural network modeling.
   
 
 
