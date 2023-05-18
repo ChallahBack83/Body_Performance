@@ -106,7 +106,7 @@ Importing the data into visualization tools, we were able to see patterns broken
 
 ![feature_importance](https://github.com/ChallahBack83/Body_Performance/blob/main/Images/rf_feature_list.png)
 
-![dashboard](https://github.com/ChallahBack83/Body_Performance/blob/J_Albrecht/First_Dashboard.png)
+
 
 ## Machine Learning Model
 
