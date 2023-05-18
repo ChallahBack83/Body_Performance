@@ -115,7 +115,7 @@ In the neural network, we used OneHotEncode to create binary values in 4 differe
 
 Final data has been entered into two [tables](https://github.com/ChallahBack83/Body_Performance/blob/main/Table%20Images/importing_data_to_tables.png), one for [physical metrics](https://github.com/ChallahBack83/Body_Performance/blob/main/Resources/Physical_metrics.csv) and another for [activity metrics](https://github.com/ChallahBack83/Body_Performance/blob/main/Resources/Activity_metrics.csv).  They were merged together to create a new [body performance data](https://github.com/ChallahBack83/Body_Performance/blob/main/Resources/body_performance.csv) file for our analysis phase. 
 
-You can view the schema [HERE](https://github.com/ChallahBack83/Body_Performance/blob/main/Resources/body_perf_schema.sql) and the updated ERD [HERE](https://github.com/ChallahBack83/Body_Performance/blob/main/Table%20Images/ERD%20Schema.png).
+You can view the schema [HERE](https://github.com/ChallahBack83/Body_Performance/blob/main/queries_for_tables.sql) and the updated ERD [HERE](https://github.com/ChallahBack83/Body_Performance/blob/main/Table%20Images/ERD%20Schema.png).
 - Created ID based on Index for join/merge.
 - Cleaned up data errors.
 - Joined into new table.
